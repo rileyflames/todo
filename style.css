@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+body{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    min-width: 350px;
+    border: 1px solid grey;
+    border-radius: .3em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 0 .4rem;
+}
+.header{
+    text-align: center;
+    text-transform: uppercase;
+    color: grey;
+    position: relative;
+}
+.header::after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: grey;
+    bottom: -10%;
+    left: 25%;
+}
+
+.add-task-items{
+    width: 100%;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.sub-heading{
+    text-transform: capitalize;
+    margin: .9em 0;
+    color: rgb(54, 53, 53);
+}
+form input{
+    width: 89%;
+    padding: .6em .4em;
+    outline: none;
+    border: none;
+    background-color: rgba(169, 169, 169, 0.445);
+    border-radius: .3em;
+    transition: all 0.3s ease;
+}
+form input::placeholder{
+   color: rgb(105, 98, 98);
+}
+form input:focus{
+    outline: 1px solid rgba(19, 18, 18, 0.589);
+    background-color: rgba(230, 225, 225, 0.445);
+    padding: .7rem 0;
+    color: rgba(12, 12, 12, 0.747);
+    padding-left: 20px;
+}
+.add--btn{
+    position: absolute;
+    right: -1%;
+    bottom: 3%;
+    padding: .4rem .3rem;
+    text-transform: capitalize;
+    border: 1px solid grey;
+    background-color: transparent;
+    border-radius: .3rem;
+    transition: all 0.3s ease-in;
+}
+.add--btn:hover{
+    cursor: pointer;
+    border: 1px solid green;
+    background-color: transparent;
+    color: green;
+}
+
+
+
+
+
+
+.tasks{
+    margin: 1rem 0;
+    width: 100%;
+    border-top: 1px solid grey;
+    padding-top: 1rem;
+}
+.task-items{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: .9em;
+    transition: all 0.3s ease-out;
+}
+.task-items li{
+    width: 100%;
+    border: 1px solid rgb(153, 148, 148);
+    border-radius: .3rem;
+    padding: .6em;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+}
+
+.delete{
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: green;
+    padding: .3rem .7rem;
+    position: absolute;
+    right: 2%;
+    transition: all 0.3s ease-in;
+}
+.delete:hover{
+    transform: scale(1.3);
+    color: red;
+}
+.clicked.clicked{
+    text-decoration: line-through;
+    border: 1px solid green;
+}
+
+
